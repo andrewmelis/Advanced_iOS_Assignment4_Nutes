@@ -17,6 +17,7 @@
 
 @implementation NoteViewController
 
+
 @synthesize linkedAccount = _linkedAccount;
 @synthesize fileSystem = _fileSystem;
 @synthesize noteTextView = _noteTextView;
@@ -50,6 +51,8 @@
 - (IBAction)doneButton:(UIBarButtonItem *)sender {
     
     [_noteTextView resignFirstResponder];
+    
+    
     
     //sync with user after create first note
     [self linkAccount];
@@ -114,7 +117,26 @@
 }
 
 - (IBAction)cameraButton:(UIBarButtonItem *)sender {
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]==YES) {
+        //create image picker controller
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        
+        //Set source to the camera
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        
+        //delegate is self
+        imagePicker.delegate = self;
+        
+        //show image picker
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+    else {
+        //device has no camera
+        //look into this later
+    }
 }
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -126,6 +148,27 @@
         controllerForSegue = segue.destinationViewController;
         
     }
+}
+
+
+//dealing with photos
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //access the uncropped image from info dictioanry
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+    //dismiss controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    //resize image
+    UIGraphicsBeginImageContext(CGSizeMake(640, 640));
+    [image drawInRect:CGRectMake(0, 0, 640, 640)];
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //Upload Image
+    NSData *imageData = UIImageJPEGRepresentation(smallImage, 0.05f);
+//    [self uploadImages:imageData];
 }
 
 

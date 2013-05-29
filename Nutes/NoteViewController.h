@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <dropbox/dropbox.h>
 
-@interface NoteViewController : UIViewController
+@interface NoteViewController : UIViewController <UIImagePickerControllerDelegate>
 
 - (IBAction)doneButton:(UIBarButtonItem *)sender;
 - (IBAction)allNotesButton:(UIBarButtonItem *)sender;
