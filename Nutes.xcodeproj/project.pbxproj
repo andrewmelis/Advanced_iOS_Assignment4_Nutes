@@ -17,12 +17,14 @@
 		2823C02817565EEC00CDEEA5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2823C02717565EEC00CDEEA5 /* Default@2x.png */; };
 		2823C02A17565EEC00CDEEA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2823C02917565EEC00CDEEA5 /* Default-568h@2x.png */; };
 		2823C02D17565EEC00CDEEA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2823C02B17565EEC00CDEEA5 /* MainStoryboard.storyboard */; };
-		2823C03017565EEC00CDEEA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823C02F17565EEC00CDEEA5 /* ViewController.m */; };
 		2823C03717565F6E00CDEEA5 /* dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03617565F6E00CDEEA5 /* dropbox.framework */; };
 		2823C0391756604600CDEEA5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C0381756604600CDEEA5 /* CFNetwork.framework */; };
 		2823C03B1756605400CDEEA5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03A1756605400CDEEA5 /* Security.framework */; };
 		2823C03D1756606000CDEEA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03C1756606000CDEEA5 /* SystemConfiguration.framework */; };
 		2823C03F1756606800CDEEA5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03E1756606800CDEEA5 /* QuartzCore.framework */; };
+		2823C0421756691F00CDEEA5 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823C0411756691F00CDEEA5 /* NoteViewController.m */; };
+		2823C04B1756828E00CDEEA5 /* NSString+Now.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823C04A1756828D00CDEEA5 /* NSString+Now.m */; };
+		2823C04E175688A900CDEEA5 /* AllNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823C04D175688A900CDEEA5 /* AllNotesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +42,17 @@
 		2823C02717565EEC00CDEEA5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2823C02917565EEC00CDEEA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2823C02C17565EEC00CDEEA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		2823C02E17565EEC00CDEEA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2823C02F17565EEC00CDEEA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2823C03617565F6E00CDEEA5 /* dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dropbox.framework; sourceTree = "<group>"; };
 		2823C0381756604600CDEEA5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2823C03A1756605400CDEEA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2823C03C1756606000CDEEA5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2823C03E1756606800CDEEA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2823C0401756691F00CDEEA5 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		2823C0411756691F00CDEEA5 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		2823C0491756828D00CDEEA5 /* NSString+Now.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Now.h"; sourceTree = "<group>"; };
+		2823C04A1756828D00CDEEA5 /* NSString+Now.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Now.m"; sourceTree = "<group>"; };
+		2823C04C175688A900CDEEA5 /* AllNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNotesViewController.h; sourceTree = "<group>"; };
+		2823C04D175688A900CDEEA5 /* AllNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNotesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +109,15 @@
 		2823C01917565EEC00CDEEA5 /* Nutes */ = {
 			isa = PBXGroup;
 			children = (
+				2823C0491756828D00CDEEA5 /* NSString+Now.h */,
+				2823C04A1756828D00CDEEA5 /* NSString+Now.m */,
 				2823C02217565EEC00CDEEA5 /* AppDelegate.h */,
 				2823C02317565EEC00CDEEA5 /* AppDelegate.m */,
 				2823C02B17565EEC00CDEEA5 /* MainStoryboard.storyboard */,
-				2823C02E17565EEC00CDEEA5 /* ViewController.h */,
-				2823C02F17565EEC00CDEEA5 /* ViewController.m */,
+				2823C0401756691F00CDEEA5 /* NoteViewController.h */,
+				2823C0411756691F00CDEEA5 /* NoteViewController.m */,
+				2823C04C175688A900CDEEA5 /* AllNotesViewController.h */,
+				2823C04D175688A900CDEEA5 /* AllNotesViewController.m */,
 				2823C01A17565EEC00CDEEA5 /* Supporting Files */,
 			);
 			path = Nutes;
@@ -195,7 +205,9 @@
 			files = (
 				2823C02017565EEC00CDEEA5 /* main.m in Sources */,
 				2823C02417565EEC00CDEEA5 /* AppDelegate.m in Sources */,
-				2823C03017565EEC00CDEEA5 /* ViewController.m in Sources */,
+				2823C0421756691F00CDEEA5 /* NoteViewController.m in Sources */,
+				2823C04B1756828E00CDEEA5 /* NSString+Now.m in Sources */,
+				2823C04E175688A900CDEEA5 /* AllNotesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
