@@ -18,6 +18,11 @@
 		2823C02A17565EEC00CDEEA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2823C02917565EEC00CDEEA5 /* Default-568h@2x.png */; };
 		2823C02D17565EEC00CDEEA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2823C02B17565EEC00CDEEA5 /* MainStoryboard.storyboard */; };
 		2823C03017565EEC00CDEEA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823C02F17565EEC00CDEEA5 /* ViewController.m */; };
+		2823C03717565F6E00CDEEA5 /* dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03617565F6E00CDEEA5 /* dropbox.framework */; };
+		2823C0391756604600CDEEA5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C0381756604600CDEEA5 /* CFNetwork.framework */; };
+		2823C03B1756605400CDEEA5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03A1756605400CDEEA5 /* Security.framework */; };
+		2823C03D1756606000CDEEA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03C1756606000CDEEA5 /* SystemConfiguration.framework */; };
+		2823C03F1756606800CDEEA5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2823C03E1756606800CDEEA5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		2823C02C17565EEC00CDEEA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2823C02E17565EEC00CDEEA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2823C02F17565EEC00CDEEA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2823C03617565F6E00CDEEA5 /* dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dropbox.framework; sourceTree = "<group>"; };
+		2823C0381756604600CDEEA5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2823C03A1756605400CDEEA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2823C03C1756606000CDEEA5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2823C03E1756606800CDEEA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +54,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2823C03F1756606800CDEEA5 /* QuartzCore.framework in Frameworks */,
+				2823C03D1756606000CDEEA5 /* SystemConfiguration.framework in Frameworks */,
+				2823C03B1756605400CDEEA5 /* Security.framework in Frameworks */,
+				2823C0391756604600CDEEA5 /* CFNetwork.framework in Frameworks */,
 				2823C01417565EEC00CDEEA5 /* UIKit.framework in Frameworks */,
 				2823C01617565EEC00CDEEA5 /* Foundation.framework in Frameworks */,
 				2823C01817565EEC00CDEEA5 /* CoreGraphics.framework in Frameworks */,
+				2823C03717565F6E00CDEEA5 /* dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,11 @@
 		2823C01217565EEC00CDEEA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2823C03E1756606800CDEEA5 /* QuartzCore.framework */,
+				2823C03C1756606000CDEEA5 /* SystemConfiguration.framework */,
+				2823C03A1756605400CDEEA5 /* Security.framework */,
+				2823C0381756604600CDEEA5 /* CFNetwork.framework */,
+				2823C03617565F6E00CDEEA5 /* dropbox.framework */,
 				2823C01317565EEC00CDEEA5 /* UIKit.framework */,
 				2823C01517565EEC00CDEEA5 /* Foundation.framework */,
 				2823C01717565EEC00CDEEA5 /* CoreGraphics.framework */,
@@ -260,6 +280,10 @@
 		2823C03417565EEC00CDEEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutes/Nutes-Prefix.pch";
 				INFOPLIST_FILE = "Nutes/Nutes-Info.plist";
@@ -271,6 +295,10 @@
 		2823C03517565EEC00CDEEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutes/Nutes-Prefix.pch";
 				INFOPLIST_FILE = "Nutes/Nutes-Info.plist";
