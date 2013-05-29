@@ -16,6 +16,11 @@
 @end
 
 @implementation NoteViewController
+{
+    NSData *noteImageData;
+    BOOL imagesToSend;
+    BOOL imagesReceive;
+}
 
 
 @synthesize linkedAccount = _linkedAccount;
@@ -28,6 +33,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    imagesToSend = false;
     
     NSLog(@"%@",_path.name);
     if(_path!= nil) {
@@ -70,6 +77,10 @@
     NSString *newNoteText = [NSString stringWithFormat:@"%@", _noteTextView.text];
     
     [file writeString:newNoteText error:nil];
+    
+    if (imagesToSend) {
+        [file writeData:noteImageData error:nil];
+    }
     
     [file update:nil];
     
@@ -130,6 +141,8 @@
         
         //show image picker
         [self presentViewController:imagePicker animated:YES completion:nil];
+        
+        imagesToSend = true;
     }
     else {
         //device has no camera
@@ -164,11 +177,14 @@
     UIGraphicsBeginImageContext(CGSizeMake(640, 640));
     [image drawInRect:CGRectMake(0, 0, 640, 640)];
     UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    
     UIGraphicsEndImageContext();
     
     //Upload Image
     NSData *imageData = UIImageJPEGRepresentation(smallImage, 0.05f);
-//    [self uploadImages:imageData];
+    
+    noteImageData = imageData;
 }
 
 
